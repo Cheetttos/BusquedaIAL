@@ -14,9 +14,11 @@ int main() {
     for (int i = 0; i < longitud; i++) {
         caracteres++;
 
-        if (texto[i] == "%"){
+        if (texto[i] == -96 || texto[i] == -126 || texto[i] == -95 || texto[i] == -94 || texto[i] == -93){
             acentos++;
         }
+
+
 
         if(isupper(texto[i])){
             mayusculas++;
@@ -50,7 +52,7 @@ int main() {
     printf("Cantidad de palabras: %d\n", palabras);
     printf("Cantidad de caracteres: %d\n", caracteres);
     printf("Cantidad de acentos: %d\n", acentos);
-    printf("Cantidad de signos de puntuación: %d\n", puntuacion);
+    printf("Cantidad de signos de puntuacion: %d\n", puntuacion);
     printf("Cantidad de vocales: %d\n", vocales);
     printf("Cantidad de mayusculas: %d\n", mayusculas);
     printf("Cantidad de minusculas: %d\n", minusculas);
